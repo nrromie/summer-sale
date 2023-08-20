@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Summer Sale</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700;900&family=Work+Sans:wght@400;500;600;700&display=swap');
+        *{
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <header>
-
+    <header class="bg-[#F9F6E2]">
+        <div class="flex w-3/4 mx-auto h-[100vh]">
+            <div class="flex justify-center items-center w-1/2">
+                <div class="text-center">
+                    <h3 class="text-3xl font-medium">---SALE FEVER---</h3>
+                    <h1 class="text-[3.4rem] font-bold">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span></h1>
+                    <p class="text-2xl font-medium">Use Promo Code <span class="bg-[#E527B2] text-white font-semibold px-2 py-1 rounded">SELL200</span></p>
+                </div>
+            </div>
+            <div class="w-1/2 flex justify-center items-center">
+                <img class="w-full" src="images/bannerimg.png" alt="Banner Image">
+            </div>
+        </div>
     </header>
     <main>
 
     </main>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
