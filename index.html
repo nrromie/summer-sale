@@ -22,7 +22,7 @@
                 <div class="text-center">
                     <h3 class="lg:text-3xl md:text-3xl text-2xl font-medium">---SALE FEVER---</h3>
                     <h1 class="lg:text-[3.4rem] md:text-[3.4rem] text-4xl font-bold mt-8 lg:leading-[4rem] md:leading-[4rem]">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span></h1>
-                    <p class="text-2xl font-medium mt-10">Use Promo Code <span class="bg-[#E527B2] text-white font-semibold px-2 py-1 rounded">SELL200</span></p>
+                    <p class="text-2xl font-medium mt-10">Use Promo Code <span class="bg-[#E527B2] hover:bg-[#8a2d71] text-white font-semibold px-2 py-1 rounded">SELL200</span></p>
                 </div>
             </div>
             <div class="lg:w-1/2 flex justify-center items-center">
@@ -70,7 +70,7 @@
                             <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <h2 class="text-xl font-semibold" id="prod2Name">Chopping Coards</h2>
-                        <p class="text-xl text-[#11111180]" id="prod2Price">39.00 TK</p>
+                        <p class="text-xl text-[#11111180]" id="prod2Price">80.00 TK</p>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@
                             <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <h2 class="text-xl font-semibold" id="prod3Name">Home Cooker</h2>
-                        <p class="text-xl text-[#11111180]" id="prod3Price">39.00 TK</p>
+                        <p class="text-xl text-[#11111180]" id="prod3Price">120.00 TK</p>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                             <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
                         </div>
                         <h2 class="text-xl font-semibold" id="prod4Name">Sports Back Cap</h2>
-                        <p class="text-xl text-[#11111180]" id="prod4Price">39.00 TK</p>
+                        <p class="text-xl text-[#11111180]" id="prod4Price">150.00 TK</p>
                     </div>
                 </div>
 
@@ -129,7 +129,7 @@
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <h2 class="text-xl font-semibold" id="prod5Name">Full Jersey Set</h2>
-                        <p class="text-xl text-[#11111180]" id="prod5Price">39.00 TK</p>
+                        <p class="text-xl text-[#11111180]" id="prod5Price">200.00 TK</p>
                     </div>
                 </div>
 
@@ -147,7 +147,7 @@
                             <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <h2 class="text-xl font-semibold" id="prod6Name">Sports cates</h2>
-                        <p class="text-xl text-[#11111180]" id="prod6Price">39.00 TK</p>
+                        <p class="text-xl text-[#11111180]" id="prod6Price">101.00 TK</p>
                     </div>
                 </div>
             </div>
@@ -169,7 +169,7 @@
                             <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" checked />
                         </div>
                         <h2 class="text-xl font-semibold" id="prod7Name">Single Relax Chair</h2>
-                        <p class="text-xl text-[#11111180]" id="prod7Price">39.00 TK</p>
+                        <p class="text-xl text-[#11111180]" id="prod7Price">120.00 TK</p>
                     </div>
                 </div>
 
@@ -187,7 +187,7 @@
                             <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <h2 class="text-xl font-semibold" id="prod8Name">Children play</h2>
-                        <p class="text-xl text-[#11111180]" id="prod8Price">39.00 TK</p>
+                        <p class="text-xl text-[#11111180]" id="prod8Price">200.00 TK</p>
                     </div>
                 </div>
 
@@ -205,7 +205,7 @@
                             <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <h2 class="text-xl font-semibold" id="prod9Name">Flexible Sofa</h2>
-                        <p class="text-xl text-[#11111180]" id="prod9Price">39.00 TK</p>
+                        <p class="text-xl text-[#11111180]" id="prod9Price">230.00 TK</p>
                     </div>
                 </div>
             </div>
@@ -217,7 +217,7 @@
                 <p class="text-2xl font-medium mb-4">Have coupon?</p>
                 <div class="flex">
                 <input id="coupon-input" type="text" placeholder="Coupon code" class="w-3/5 text-xl p-2 border rounded-l-lg">
-                <button id="coupon-btn" class="w-2/5 bg-[#E527B2] text-white text-xl font-semibold p-2 rounded-r-lg disabled:bg-gray-600">Apply</button>
+                <button id="coupon-btn" class="w-2/5 bg-[#E527B2] hover:bg-[#8a2d71] text-white text-xl font-semibold p-2 rounded-r-lg disabled:bg-gray-600" onclick="updatePrices(0)">Apply</button>
                 </div>
             </div>
             <div>
@@ -226,13 +226,13 @@
                     <hr>
                     <div class="my-2 text-2xl font-medium">
                         <p>Total price: <span class="text-[#11111180]"><span id="totalPrice">00</span>TK</span></p>
-                        <p>Discount : <span class="text-[#11111180]"></span><span id="discount">00</span>TK</span></p>
-                        <p>Total: <span class="text-[#11111180]"></span><span id="finalPrice">00</span>TK</span></p>
+                        <p>Discount : <span class="text-[#11111180]"><span id="discount">00</span>TK</span></p>
+                        <p>Total: <span class="text-[#11111180]"><span id="finalPrice">00</span>TK</span></p>
                     </div>
                     <hr>
                 </div>
                 <div class="flex justify-center items-center relative">
-                    <button id="purchase-btn" class="absolute mb-[-12px] w-4/5 bg-[#E527B2] text-white text-xl font-semibold p-2 rounded-lg disabled:bg-gray-600" onclick="my_modal_4.showModal()">Make Purchase</button>
+                    <button id="purchase-btn" class="absolute mb-[-12px] w-4/5 bg-[#E527B2] hover:bg-[#8a2d71] text-white text-xl font-semibold p-2 rounded-lg disabled:bg-gray-600" onclick="my_modal_4.showModal()">Make Purchase</button>
                     <dialog id="my_modal_4" class="modal">
                     <form method="dialog" class="modal-box w-96">
                         <div class="flex flex-col justify-center items-center gap-5">
@@ -240,7 +240,7 @@
                             <h1 class="text-4xl font-bold">Congratulations</h1>
                             <p class="text-xl text-[#11111180]">Your Purchase the product</p>
                             <div class="modal-action">
-                                <button onclick="location.reload()" class="btn bg-[#E527B2] text-white">Go Home</button>
+                                <button onclick="location.reload()" class="btn bg-[#E527B2] text-white hover:bg-[#8a2d71]">Go Home</button>
                             </div>
                         </div>
                     </form>

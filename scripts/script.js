@@ -10,16 +10,16 @@ function updatePrices(prodPrice){
 
     let discountPrice = ((20/100)*newTotalprice).toFixed(2);
 
-    if (newTotalprice > 200){
+    if (newTotalprice >= 200){
         couponBtn.disabled = false;
     }
 
-    if (newTotalprice  > 1){
+    if (newTotalprice  > 0){
         purchaseBtn.disabled = false;
     }
 
     let finalPrice = parseFloat(prevfinalPrice.innerText);
-    if (newTotalprice > 200 && disc == true){
+    if (newTotalprice >= 200 && disc == true){
         finalPrice = newTotalprice - discountPrice;
         discount.innerText = discountPrice;
     }
@@ -41,16 +41,20 @@ function selectItems(prodNameId, prodPriceId){
     updatePrices(prodPrice);
 }
 
-const couponBtn = document.getElementById('coupon-btn');
-couponBtn.disabled = true;
-let disc;
-couponBtn.addEventListener('click', function(){
+function checkCoupon(){
     const coupon = document.getElementById('coupon-input').value;
     if (coupon === "SELL200"){
-        updatePrices(0);
         return disc = true;
     }
     else{
         return disc = false;
     }
+}
+
+const couponBtn = document.getElementById('coupon-btn');
+couponBtn.disabled = true;
+let disc;
+couponBtn.addEventListener('click', function(){
+    checkCoupon();
+    updatePrices(0);
 })
