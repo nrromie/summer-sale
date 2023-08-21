@@ -1,23 +1,25 @@
 const purchaseBtn = document.getElementById('purchase-btn');
 purchaseBtn.disabled = true;
 
+const couponBtn = document.getElementById('coupon-btn');
+couponBtn.disabled = true;
+
 function updatePrices(prodPrice){
     const totalPrice = document.getElementById('totalPrice');
     const newTotalprice = parseFloat(totalPrice.innerText) + prodPrice;
     totalPrice.innerText = newTotalprice;
-    const prevfinalPrice = document.getElementById('finalPrice');
-    const discount = document.getElementById('discount');
-
-    let discountPrice = ((20/100)*newTotalprice).toFixed(2);
 
     if (newTotalprice >= 200){
         couponBtn.disabled = false;
     }
 
-    if (newTotalprice  > 0){
+    if (newTotalprice > 0){
         purchaseBtn.disabled = false;
     }
 
+    let discountPrice = ((20/100)*newTotalprice).toFixed(2);
+    const discount = document.getElementById('discount');
+    const prevfinalPrice = document.getElementById('finalPrice');
     let finalPrice = parseFloat(prevfinalPrice.innerText);
     if (newTotalprice >= 200 && disc == true){
         finalPrice = newTotalprice - discountPrice;
@@ -47,12 +49,11 @@ function checkCoupon(){
         return disc = true;
     }
     else{
+        alert('Please enter a valid coupon')
         return disc = false;
     }
 }
 
-const couponBtn = document.getElementById('coupon-btn');
-couponBtn.disabled = true;
 let disc;
 couponBtn.addEventListener('click', function(){
     checkCoupon();
